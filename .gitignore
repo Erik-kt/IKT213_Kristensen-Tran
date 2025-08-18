@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+*.manifest
+*.spec
+pip-wheel-metadata/
+
+# Anaconda
+*.conda
+*.ipynb_checkpoints
+*.env
+*.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyCharm / IntelliJ IDEA
+.idea/
+*.iml
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test / coverage
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Local data
+*.sqlite3

@@ -36,8 +36,8 @@ def hsv(image):
     return hsvImage
 
 def hue_shifted(image, emptyPictureArray, hue):
-    hueShifted = (image.astype(np.int16) + int(hue)) % 256
-    hueShifted = hueShifted.astype(np.uint8)
+    hueShifted = (image.astype(np.int16) + int(hue))
+    hueShifted = np.clip(hueShifted, 0, 255).astype(np.uint8)
     np.copyto(emptyPictureArray, hueShifted)
     return emptyPictureArray
 
@@ -68,6 +68,8 @@ def main():
 
     emptyHueArray = np.zeros((h, w, 3), dtype=np.uint8)
     hue_shifted_image = hue_shifted(img, emptyHueArray, hue= 50)
+    print("Original pixel [0,0]:", img[0, 0])  # quick check to read values for hue shift by 50
+    print("Hue-shifted pixel [0,0]:", hue_shifted_image[0, 0])
     smoothed_image = smoothing(img)
 
     rotated_90_image = rotation(img, 90)
